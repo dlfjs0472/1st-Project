@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>NAVum SHOPPING입니다</title>
+<link rel="icon" href="/image/favicon.ico">        <!-- Favicon  -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> <!--CDN 링크 -->
+<link rel="stylesheet" href="/css/shopping_index.css">
+</head>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<body>
+	<!-- ****** Header Area Start ****** -->
+	<%- include ('./inc/header')%>
+	<!-- ****** Header Area End ****** -->
+	
+<div class="middle1">
+	<!-- 카테고리 -->
+	<div class="aside">
+		<!-- <i class="fas fa-times"></i> -->
+		<div class="bars">
+			<i class="fas fa-bars" onclick="location.href='//localhost:3000/admin/product/list'" style="cursor: pointer;"> &nbsp; CATEGORY &nbsp; </i>
+		</div>
+		<br>
+		<nav>
+			<ul>
+				<li class="top-category"><a href=""> 여성패션</a>
+					<ul class="sub-category">
+						<li><a href=""> 원피스 </a></li>
+						<li><a href=""> 티셔츠</a></li>
+						<li><a href=""> 청바지</a></li>
+						<li><a href=""> 스커트</a></li>
+					</ul>
+				</li>
+				<li class="top-category"><a href=""> 남성패션</a>
+					<ul class="sub-category">
+						<li><a href=""> 셔츠/남방</a></li>
+						<li><a href=""> 코트</a></li>
+						<li><a href=""> 카디건</a></li>
+						<li><a href=""> 정장세트</a></li>
+					</ul>
+				</li>
+				<li class="top-category"><a href=""> 식품</a>
+					<ul class="sub-category">
+						<li><a href=""> 농산물</a></li>
+						<li><a href=""> 과자</a></li>
+						<li><a href=""> 냉동/간편조리식품</a></li>
+					</ul>
+				</li>
+				<li class="top-category"><a href=""> 생활/건강</a>
+					<ul class="sub-category">
+						<li><a href=""> 자동차용품</a></li>
+						<li><a href=""> 세탁용품</a></li>
+						<li><a href=""> 문구/사무용품</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+	<!-- //카테고리 -->
+
+	<section class="body_sec1">
+		<div>
+			<a href="https://shopping.naver.com/pet/event/10007534"><img src="/image/shopping/banner1.jpg" alt=""></a>
+			<a href="https://shopping.naver.com/outlet/event/10001830"><img src="/image/shopping/banner2.jpg" alt=""></a>
+		</div>
+	</section>
+	<section class="body_sec2">
+		<div>
+			<span>
+			<i class="fas fa-quote-left"></i>
+			<br>
+			<span>쇼핑몰 소식</span>
+			<br>
+			<i class="fas fa-quote-right"></i>
+			<span></span>
+		</div>
+	</section>
+
+</div>
+<!-- ****** div "middle1" End ****** -->
+
+
+<div class="middle2" style="margin-top: 15px;">
+	<section class="body_sec3">
+		<span>[ 신규상품 ]</span>
+		<div></div>
+
+	</section>
+
+</div>
+<!-- ****** div "middle2" End ****** -->
+
+
+
+<!-- ****** Footer Area Start ****** -->
+<%- include ('./inc/footer')%> 
+<!-- ****** Footer Area End ****** -->
+
+
+    
+</body>
+</html>

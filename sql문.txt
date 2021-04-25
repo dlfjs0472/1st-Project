@@ -1,0 +1,85 @@
+create table  topcategory(
+  topcategory_id int primary key auto_increment
+ , top_name varchar(40)
+) default  character set utf8;
+여성패션
+남성패션
+식품
+생활/건강
+
+
+create table subcategory(
+    subcategory_id int primary key auto_increment
+  , topcategory_id int
+  , sub_name varchar(40)
+  , constraint  fk_topsub  foreign key (topcategory_id) 
+    references topcategory(topcategory_id)
+) default  character set utf8;
+
+원피스
+티셔츠
+청바지
+스커트
+
+셔츠/남방
+코트
+카디건
+정장세트
+
+농산물
+과자
+냉동/간편조리식품
+
+자동차용품
+세탁용품
+문구/사무용품
+
+
+create table product(
+   product_id int primary key auto_increment
+ , subcategory_id int
+ , product_name varchar(60)
+ , price int default 0
+ , brand varchar(30)
+ , detail text
+ , filename varchar(40)
+ , constraint fk_subproduct foreign key(subcategory_id) 
+   references subcategory(subcategory_id)
+) default  character set utf8;
+
+
+insert into product(subcategory_id, product_name, price, brand, detail) values('1','더블롱자켓원피스',59000,'코코쓰','여름반팔/정장하객');
+insert into product(subcategory_id, product_name, price, brand, detail) values('2','레터링 반팔 티셔츠',14900,'더보느','무료배송 이벤트중');
+insert into product(subcategory_id, product_name, price, brand, detail) values('3','와이드 데님',39840,'지오다노','라이트, 미디엄, 다크블루');
+insert into product(subcategory_id, product_name, price, brand, detail) values(4,'클래식체크 롱스커트',43600,'시슬리','80% 세일!');
+insert into product(subcategory_id, product_name, price, brand, detail) values(5,'긴팔 셔츠/남방 컬렉션',21900,'레노마','레노마 셔츠 2021');
+insert into product(subcategory_id, product_name, price, brand, detail) values(6,'봄/가을 미들 코트',46900,'민옴므','가성비 6컬러 코트');
+insert into product(subcategory_id, product_name, price, brand, detail) values(7,'램스울 카디건 차콜',69500,'무신사','꼼파뇨X무신사');
+insert into product(subcategory_id, product_name, price, brand, detail) values(8,'로맨틱 체크 수트',40000,'수트로맨스','128000 → 40000원!');
+insert into product(subcategory_id, product_name, price, brand, detail) values(9,'쌀 10kg',26500,'이쌀이다','백진주 경기미 신동진쌀');
+insert into product(subcategory_id, product_name, price, brand, detail) values(10,'LOTUS 커피과자 150개입',1600,'푸드365','배보다 배꼽이 더 큰 배송비 2500원!');
+insert into product(subcategory_id, product_name, price, brand, detail) values(11,'비비고 왕교자 6종',14400,'제일제당','롯데카드 결제시 5% 할인');
+insert into product(subcategory_id, product_name, price, brand, detail) values(12,'KIXX파오 엔진오일 1L',5300,'디에스오일','13시 이전 주문시 당일배송');
+insert into product(subcategory_id, product_name, price, brand, detail) values(13,'이동식 빨래바구니 2~4단',9500,'트레이드진','[베스트셀러] 76% 세일!');
+insert into product(subcategory_id, product_name, price, brand, detail) values(14,'제트스트림 볼펜 모음',390,'안나네가게','단색볼펜/3색볼펜/0.38');
+
+
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(01, 1, '원피스');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(02, 1, '티셔츠');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(03, 1, '청바지');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(04, 1, '스커트');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(05, 2, '셔츠/남방');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(06, 2, '코트');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(7, 2, '카디건');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(8, 2, '정장세트');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(9, 3, '농산물');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(10, 3, '과자');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(11, 3, '냉동/간편조리식품');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(12, 4, '자동차용품');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(13, 4, '세탁용품');
+insert into subcategory(subcategory_id, topcategory_id, sub_name) values(14, 4, '문구/사무용품');
+
+insert into topcategory(topcategory_id, top_name) values(1, '여성패션');
+insert into topcategory(topcategory_id, top_name) values(2, '남성패션');
+insert into topcategory(topcategory_id, top_name) values(3, '식품');
+insert into topcategory(topcategory_id, top_name) values(4, '생활/건강');

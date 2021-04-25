@@ -1,0 +1,78 @@
+<!doctype HTML>
+<head>
+<meta charset="UTF-8">
+<title>네이버 로그인</title>
+<link rel="stylesheet" href="/css/login.css">
+<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+var flag=false;
+
+function loginCheck(){
+	$("form").attr({
+		action: "/admin/login",
+		method: "post"
+	});
+	$("form").submit(); //전송    
+};
+
+function color_change(){
+	if(flag){
+		document.getElementById("stay-login").style.color="#9ba1a3";
+	}else{
+		document.getElementById("stay-login").style.color="var(--naver-green-color)";
+	}
+	flag=!flag;
+}
+
+</script>
+</head>
+<body>
+	<div class="main-container">
+		<div class="main-wrap">
+		<header>
+			<div class="sel-lang-wrap">
+				<select class="lang-select">
+					<option>한국어</option>
+					<option>English</option>
+				</select>
+			</div>
+			<div class="logo-wrap"  >
+				<img src="/images/naver_logo.png" class="logo" style="height: 70px;" onclick="location.href='//localhost:3000/main.html'">
+			</div>
+		</header>
+		<section class="login-input-section-wrap">
+			<form>
+				<div class="login-input-wrap">	
+					<input placeholder="ID" type="text" name="master_id" required="required"></input>
+				</div>
+				<div class="login-input-wrap password-wrap">	
+					<input placeholder="PW" type="password" name="master_pass" required="required"></input>
+				</div>
+				<div class="login-button-wrap">
+					<button value="Login" onclick="loginCheck()" type="button">로그인</button>
+				</div>
+			</form>
+			<div class="login-stay-sign-in" onclick="color_change()">
+				<i class="far fa-check-circle" id="stay-login"></i>
+				<span>로그인 상태 유지</span>
+			</div>
+		</section>
+		<section class="Easy-sign-in-wrap">
+			<h2>더 많은 로그인</h2>
+			<ul class="sign-button-list">
+				<li><button><i class="fas fa-qrcode"></i><span>Sign in with QR code</span></button></li>
+				<li><button><i class="fab fa-facebook-square"></i><span>Facebook</span></button></li>
+				<li><button><i class="fab fa-line"></i><span>line</span></button></li>
+			</ul>
+			<p class="forget-msg">ID & PW 찾기 | 회원가입</p>
+		</section>
+		<footer>
+			<div class="copyright-wrap">
+			<span>	<img src="/images/naver_logo.png"> Copyright © NAVum Corp. All Rights Reserved.</span>
+			</div>
+		</footer>
+		</div>
+	</div>
+</body>

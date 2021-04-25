@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이븜카페 메인페이지</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.icon2">
+    <link rel="stylesheet" href="../css/cafe_main.css">
+</head>
+<body>
+    <div class="header_top">
+        <div id="header_left">NAVum</div>
+        <div id="header_right">
+            <button href="../login/login.html" class="login_button">로그인</button>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="top">
+            <div id="front-img" style="cursor:hand;cursor:pointer;background-image:none;width:1080px;max-height: 340px">
+                <img alt="" href="./cafe_main.ejs" title="네이븜 카페 - 쿠킹덤!" src="/images/cafe/6.png">
+            </div>
+            <div class="top_category">
+                <li onclick="location.href='//localhost:3000/cafe/list'" style="cursor: pointer;">전체글보기</li>
+                <li>공지사항</li>
+                <li>CM노트</li>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="side">
+                <div class="cafe-info-data" style=margin-left:auto>
+                    <ul class="info-tab" style="display: flex;">
+                        <p class="gm-tcol-t" style="font-weight:bold; margin-left:20px;">카페정보</p>
+                        <p class="gm-tcol-t" style="font-weight:bold; margin-left:20px;">나의활동</p>
+                    </ul>
+                    <div class="info-box">
+                        <div class="ia-info-data" id="ia-info-data">
+                            <ul style="display:flex;">
+                                <li class="gm-tcol-c">
+                                        <img src="/images/cafe/1.png" width="58" height="58" alt="카페아이콘">
+                                        <span class="border mask_white"></span>
+                                </li>
+                                <li class="gm-tcol-c">
+                                    <span class="ico-manager">매니저</span>
+                                    <div class="ellipsis gm-tcol-c"><div class="ellipsis">쿠키런 킹덤</div></div>
+                                    <div class="thm">
+                                        since 2021.04.20.
+                                    </div>
+                                    <div class="info-view">카페소개</div>
+                                </li>                                
+                            </ul>
+                        </div>
+                        <div class="ia-info-data2">
+                            <ul>                               
+                                <li class="level-info border-sub">
+                                        <strong class="d-none">카페등급&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>
+                                        <span class="ico_rank rank21"></span>열매1단계
+                                    
+    <script type="text/javascript">
+    checkHideRankingNotice();
+    
+    function checkHideRankingNotice(){
+        var rankCookie = document.cookie;
+        var startPoint = rankCookie.indexOf("rankingHidden=");
+        if(startPoint != -1){
+            var start = startPoint + 14;
+            var end = rankCookie.indexOf(";", start);
+            if(end == -1) end = rankCookie.length;
+            var value = rankCookie.substring(start, end);
+            value = decodeURIComponent(value);
+            if(value == '30291108') {
+                hideRankingNotice();
+            }
+        }
+    }
+    
+    function hideRankingNotice() {
+        Element.hide("rankingNotice");
+        setHideCookie();
+    }
+    
+    function setHideCookie(){
+        var expireDate = new Date();
+        expireDate.setDate(expireDate.getDate()+2);
+        document.cookie = "rankingHidden=30291108; expires="+expireDate.toGMTString();
+    }
+        
+    function goRankingNoticeDetail(linkUrl) {
+        window.open(linkUrl, "rankings-introduction", "width=760,height=1010,scrollbars=no,resizable=yes");
+    }
+    </script>
+                                            
+                                        </li>
+                                <li class="mem-cnt-info" style="cursor:pointer;">
+                                    <strong class="d-none">카페멤버수&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>                                  
+                                                <span class="ico"></span>
+                                                579,607
+                                    <div class="ly_info_dsc" style="font-weight:normal;top:14px;left:5px;display:none;" id="hiddenCafeApplyLayer" onmouseover="showCafeApplyLayer();" onmouseout="hideCafeApplyLayer();">
+                                        <div class="cont cont_v1" style="width:60px">
+                                            <p><a href="/ManageJoinApplication.nhn?search.clubid=30291108" onblur="hideCafeApplyLayer();">가입대기 <span>0</span></a></p>
+                                            <span class="tail" style="left:31px"></span>
+                                        </div>
+                                    </div>
+    
+                                    
+                                    <div class="ly_info_dsc" style="top: 14px; left: 0px; display: none;" id="hiddenOpenMemberInfoLayer">
+                                        <div class="cont cont_v2">
+                                            <p>멤버목록 비공개 카페</p>
+                                            <span class="tail" style="left:6px"></span>
+                                        </div>
+                                        닫기
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ia-info-data3" id="cafePopularityLog">
+                            <ul class="gm-tcol-c">
+                                <li class="info">
+                                    <span class="tit"><span class="ico_bkmk"></span><strong class="gm-tcol-c">즐겨찾는 멤버&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>
+                                    6,152<span class="gm-tcol-c">명</span>
+                                </li>
+                                <li class="info2">
+                                    <span class="tit"><span class="ico_bkmk2"></span><strong class="gm-tcol-c">게시판 구독수&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>
+                                    12,065<span class="gm-tcol-c">회</span>
+                                </li>
+                                <li class="info3" id="cafePopularityLog_info3" >
+                                    <span class="tit"><span class="ico_mbl"></span><strong class="gm-tcol-c">우리카페앱 수&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span>
+                                    <em>472<span class="gm-tcol-c">회</span></em>
+                                    <!-- [D] 우리카페앱 수 안내 레이어 --> 
+                                    <div class="ly_info_dsc" style="top: -60px; right: -3px; display: none;" id="appCafeInstallCountDescLayer">
+                                        <div class="cont cont_v3"> 
+                                            <p>모바일에서 우리카페를<br> 바탕화면에 추가한 수 <br> <a href="https://help.naver.com/support/alias/cafe/cafe21.naver" class="more" target="_blank">자세히 보기</a></p>
+                                            <span class="tail2"></span> 
+                                        </div> 
+                                    </div> 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>                    
+                    <button class="join-cafe">카페 가입하기</button>
+                    <button class="chat-cafe">
+                        <a href="#" onclick="chatting(true);clickcr(this, 'cia*i.chat', '', '', event);return false;" target="_blank">카페 채팅</a>
+                    </button>
+                </div>
+                <div class="whole">
+                    <button class="whole-button">
+                        <a href="/cafe/list">전체글 게시판 가기</a>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="content">
+                <div class="gate-list border-sub" style="width:860px;" id="post_1">
+                    <div class="gate-box" id="gate.content">
+                        <table role="presentation" style="width:836px;table-layout:fixed;overflow:hidden" cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr><td height="12"></td></tr>
+                        <tr>
+                            <td id="editorMainContent"><a href="https://cafe.naver.com/ArticleList.nhn?search.clubid=30291108&amp;search.menuid=6&amp;search.boardtype=L" target="_blank" title="새창으로 열림">
+                                <img src="/images/cafe/4.png" id="userImg4692557" style="width: 278px; height: 130px;" alt="대문이미지"  name="cafeuserimg" onclick="popview(this)"></a><a href="https://cafe.naver.com/ArticleList.nhn?search.clubid=30291108&amp;search.menuid=46&amp;search.boardtype=I" target="_blank" title="새창으로 열림"><img src="/images/cafe/3.png" id="userImg606992" style="width: 274px; height: 130px;" alt="대문이미지"  name="cafeuserimg" onclick="popview(this)"></a><a href="https://cafe.naver.com/ArticleList.nhn?search.clubid=30291108&amp;search.menuid=39&amp;search.boardtype=L" target="_blank" title="새창으로 열림"><img src="/images/cafe/5.png" id="userImg1010845" style="width: 278px; height: 130px;" alt="대문이미지"  name="cafeuserimg" onclick="popview(this)"></a><div><a title="새창으로 열림" href="https://cafe.naver.com/blackdesertm/2042124" target="_blank"></a>
+                                    <div title="새창으로 열림" style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: '3287760_9'; font-size: 1px; font-style: normal; font-weight: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-variant-ligatures: normal; font-variant-caps: normal;">
+                                        <div><iframe src="https://www.youtube.com/embed/phZXAjDGz54?wmode=opaque&amp;isexternal=true" width="100%" height="517px" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe><br></div><div><br></div></div><div title="새창으로 열림" style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: '3287760_9'; font-size: 1px; font-style: normal; font-weight: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-variant-ligatures: normal; font-variant-caps: normal;">
+                                        <img src="/images/cafe/7.png" id="userImg2897458" style="width: 100%; height: 160px;" alt="대문이미지"  name="cafeuserimg" onclick="popview(this)"><br>
+                                        <img src="/images/cafe/8.png" id="userImg4661281" style="width: 100%; height: 160px;" alt="대문이미지" name="cafeuserimg" onclick="popview(this)"><br>
+                                        <img src="/images/cafe/10.png" id="userImg8058983" style="width: 100%; height: 160px;" alt="대문이미지"  name="cafeuserimg" onclick="popview(this)"><br><a href="https://www.youtube.com/channel/UCAOTbNctDD0Hg5MG0enQpMQ/featured" target="_blank" title="새창으로 열림">
+                                            <img src="/images/cafe/11.png" id="userImg7000696" style="width: 280px; height: 130px;" alt="대문이미지"  name="cafeuserimg" onclick="popview(this)"></a><a href="https://www.facebook.com/CRKingdomKR/" target="_blank" title="새창으로 열림"><img src="/images/cafe/9.png" id="userImg5060585" style="width: 272px; height: 130px;" alt="대문이미지"  name="cafeuserimg" onclick="popview(this)"></a><a href="https://twitter.com/CRKingdomKR" target="_blank" title="새창으로 열림">
+                                                <img src="/images/cafe/12.png" id="userImg4898885" style="width: 278px; height: 130px;" alt="대문이미지"  name="cafeuserimg" onclick="popview(this)"></a><br>
+                                            <img src="/images/cafe/13.png" id="userImg2271064" style="width: 100%; height: 145px;" alt="대문이미지"  name="cafeuserimg" onclick="popview(this)"><br></div><div style="color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: '3287760_9'; font-size: 12px; font-style: normal; font-weight: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-variant-ligatures: normal; font-variant-caps: normal;"><p style="margin: 0px; padding: 0px;"></p></div></div></td>
+                        </tr>                    
+                            <tr><td style="text-align:left;">
+                            <div class="fr" style="margin:0 !important; padding:0 !important;">
+                                <table cellspacing="0" cellpadding="0" style="margin-right:11px;">
+                                    <tbody><tr style="text-align: center;">
+                                </tr>
+                                </tbody></table>
+                            </div>
+                            </td></tr>
+                            <tr><td height="12"></td></tr>
+                        </tbody></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="bottom">
+            <h1>쿠킹덤 네이븜 공식카페</1>
+            <h2>오늘보다 내일 더 바삭해지세요 :)</h2>
+        </div>
+    </div>
+    
+</body>
+</html>

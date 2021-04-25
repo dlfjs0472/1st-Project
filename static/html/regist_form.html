@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], textarea, input[type=file]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+textarea{
+  height: 100px;
+}
+
+/*미리보기 이미지 크기 맞추기. html은 너비만 줘도 높이는 비율에 맞게 알아서 준다.*/
+#preview{
+  width: 300px;
+}
+
+input[type=button] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  
+}
+
+.content{
+  background-color: red;
+  height: 100%;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+<script>
+//Jquery의 문법 형식 (누구를).어떻게, 누구를 자리에 올수있는 요소?
+//CSS의 selector가 올수 있다..
+$(function(){ //onLoad되면....
+
+  //편집기 입히기!!
+  CKEDITOR.replace("content");
+
+  $($("input[type='button']")[0]).click(function(){ //등록버튼
+    regist();
+  });
+  $($("input[type='button']")[1]).click(function(){ //목록버튼
+    getList();
+  });
+
+  // 파일 선택시!
+  $("input[type='file']").on("change", function(){
+    // alert("이미지 선택했지?"); 확인차
+
+    // preview라는 이미지의 src값을 선택한 값을 변경!
+    console.log($(this).val());
+
+    // 지정된 옵션으로 문자열의 일부를 추출
+    var filename = $(this).val().substring( $(this).val().lastIndexOf("\\")+1 , $(this).val().length );   //역슬래시는 escaping 시켜야하기 때문에 두 개 써야함
+    console.log("추출된 파일명은 ", filename);
+
+    // $("#preview").attr("src", $(this).val());
+    $("#preview").attr("src", "http://localhost:3000/image/cafe/"+filename);  //선택 입력 후에 미리보기 띄워지게
+  });
+
+});
+
+function regist(){
+  $("form").attr("action","/cafe/regist"); //url은 개발자가 정한다, 단 서버랑 짝을 맞추자!!
+  $("form").attr("method","post");    //post였지만 바이너리로 바꿈. 너무 커서 ㅠ 는 취소
+  $("form").attr("enctype","multipart/form-data");   //텍스트 아닌 바이너리 형식도 포함되어 있다.. = multipart/form-data... 얘는 외워야 한다
+  // 만일, 이 속성을 지정하지 않으면 절대로 바이너리 파일 전송은 불가능
+  $("form").submit();//전송행위가 발생!!
+}
+function getList(){
+  location.href="/cafe/list";
+}
+</script>
+</head>
+<body>
+
+<h3>카페 글쓰기</h3>
+<div class="container">
+  <!-- 폼 태그의 속성중 action은 이 폼양식을 전송할 대상 서버의 url을 명시할 수 있다. -->
+  <!-- 
+    id와 name 공통점과 차이점
+    공통점)문서내의 요소를 식별하기 위함
+    차이점)id-유일해야함, name-중복허용(배열로 인식)
+              name은 폼 전송시 전송 파라미터 역할을 한다, 즉 변수 역할을 한다
+              이때 전송 파라미터로서의 name의 이름은 주로 db의 테이블의 컬럼명과 일치시키는 규칙 -->
+  <form>
+    <input type="text" name="title" placeholder="제목을 입력해 주세요">
+    <input type="text" name="writer" placeholder="작성자 명을 입력해 주세요">
+    <div name="content" class="content"></div>
+    <input type="file" name="pic">   <!-- 탐색기 기능!! '온체인지' 기능을 넣어서 프리뷰 이미지 동기..했으나 위에서 jQuery로 주기로 해서 뺐음-->
+    <img src="#" alt="" id="preview">
+
+    <!-- input 태그의 type중 submit은 디폴트로 전송기능이 포함되어 있기 때문에
+    클릭만으로도, 전송이 발생함, 따라서 일반 버튼화시켜놓자 -->
+    <input type="button" value="업로드">
+    <input type="button" value="목록">
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1061 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap');
+
+:root{
+    --main_logo_color : #19CE60;
+    --font_color : rgb(61,61,61);
+    --gray_font_color: rgb(112,112,112);
+    --line_divider_color:rgb(182,182,182);
+    --news_highlights_color: #F7F9FA;
+    --news_font_color :rgb(51,51,255);
+    --media_grid_line:rgb(216, 216, 216);
+    --entertain_font_color:rgb(84, 172, 194);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ================= */
+/* Naver Search Bar with Logo */
+
+/* todo : reduce the search bar size */
+/* ================= */
+
+section {
+    width: 80%;
+    margin: 0.2rem auto;
+}
+
+section > .first_side{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+section > .first_side > p{
+    font-size: 0.9rem; 
+    color: var(--font_color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+section > .first_side > p:hover{
+    text-decoration-line: underline;
+}
+
+section > .first_side > p > i{
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    color: white;
+    box-shadow: 1px 2.5px 1.5px 1.5px rgb(129,129,129);
+    background-color: rgb(114,114,114);
+    border-radius: 1rem;
+}
+
+section > .first_side > span{
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+section > .first_side > .junior_naver{
+    color: var(--gray_font_color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+
+section > .first_side > .happy_bean{
+    color: var(--gray_font_color);
+    font-weight: bold;
+}
+
+
+section > .first_side > .happy_bean:hover{
+    color: var(--main_logo_color);
+}
+
+section > .main_logo{
+    margin-top: 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 0.2fr 1.5fr;
+    align-items: center;
+    text-align: center;
+}
+
+section > .main_logo > img{
+    width: 280px;
+}
+
+section > .main_logo > #main_search_bar{
+    margin-left: 2rem;
+    position: relative;
+}
+
+section > .main_logo > #main_search_bar > input[type = "text"] {
+    margin-top: 1rem;
+    width: 80%;
+    padding: 1.8rem;
+    border: 1px solid var(--main_logo_color);
+}
+
+
+section > .main_logo > #main_search_bar > i {
+    margin:  0.5rem;
+    font-size: 2rem;
+    position: absolute;
+}
+
+section > .main_logo > #main_search_bar > .fa-keyboard{
+    top: 30%;
+    right: 15%;
+    color:  var(--gray_font_color);
+}
+
+section > .main_logo > #main_search_bar > .fa-caret-down{
+    top: 30%;
+    right: 10%;
+    color:  var(--main_logo_color);
+}
+
+section > .main_logo > #main_search_bar > div {
+    position: absolute;
+    background-color:  var(--main_logo_color);
+    width: 4.7rem;
+    height: 4.7rem;
+    font-size: 2rem;
+    color: white;
+    top: 17%;
+    right: 0;
+}
+
+section > .main_logo > #main_search_bar > div >  .fa-search {
+    margin-top: 25%;
+}
+
+section > .main_logo > .main_logo_left{
+    /* background-color: blueviolet; */
+    position: relative;
+    text-align: right;
+}
+
+section > .main_logo > .main_logo_left > .main_logo_left_1{
+    position: absolute;
+    float: right;
+    color: var(--main_logo_color);
+    margin-top: 0px;
+    margin-right: 20px;
+    text-align: right;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    /* background-color: blueviolet; */
+}
+
+section > .main_logo > .main_logo_left > .main_logo_left_2{
+    position: absolute;
+    float: right;
+    margin-top: 25px;
+    margin-right: 20px;
+    font-size: 15px;
+    /* background-color: brown; */
+}
+section > .main_logo > .main_logo_left > .main_logo_left_3{
+    position: absolute;
+    float: left;
+    margin-top: 45px;
+    margin-right: 20px;
+    font-size: 15px;
+    /* background-color: brown; */
+}
+section > .main_logo > .main_logo_left > .main_logo_left_4{
+    position: absolute;
+    float: left;
+    margin-top: 65px;
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: red;
+    /* background-color: brown; */
+}
+
+
+section > .main_logo > .main_logo_left > .icon_book{
+    width: 70px;
+    float: right;
+    right: 180px;
+    position: relative;
+    /* background-color: burlywood; */
+    margin-right: 20px;
+}
+
+
+/* ================= */
+/* End Naver Search Bar with Logo */
+/* ================= */
+
+.section_divider{
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    background-color: var(--line_divider_color);
+}
+
+/* ================= */
+/* Line Options Start */
+/* ================= */
+section > .main_option{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+
+section > .main_option > .option_green{
+    color : var(--main_logo_color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0 17px;
+    display: inline-block;
+}
+
+section > .main_option > .option_black{
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    /* margin: 0 17px;
+    display: inline-block; */
+}
+
+section > .main_option > .option_more{
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    /* margin: 0 17px;
+    display: inline-block; */
+}
+
+section > .main_option > .option_more > p> i{
+    color: var(--gray_font_color);
+    cursor: pointer;
+    /* margin: 0 17px;
+    display: inline-block; */
+}
+
+section > .main_option > .filter_more{
+    /* margin: 0 17px;
+    display: inline-block; */
+}
+
+section > .main_option > .filter_more > p > i {
+    color: var(--gray_font_color);
+    margin-left: 0.3rem;
+    margin-right: 0.1rem;
+}
+/* ================= */
+/* End Line Options Start */
+/* ================= */
+
+.section_divider_bottom {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--line_divider_color);
+}
+
+/* ================= */
+/* Main content Start */
+/* ================= */
+
+.main_section {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+
+.main_section > .main_content > .covid_banner img{
+    /* display: grid; */
+    width: 100%;
+}
+
+.main_section > .main_content > .news_highlights{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--news_highlights_color);
+    width: 100%;
+    height: 3rem;
+    margin-top: 1rem;
+    padding: 0.7rem;
+    border: 1px solid #DAE1E6;
+    /* box-shadow:  inset 2px 2px 2px rgb(216, 216 , 216); */
+    /* background-color: green; */
+}
+
+
+.main_section > .main_content >.news_highlights > .news_h1_left >.main_news {
+    flex : 1;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    cursor: pointer;
+    /* background-color: blue; */
+}
+
+
+.main_section > .main_content > .news_highlights > .news_h1_left  > .main_news > .dynamic_news{
+    margin-left: 0rem;
+    color: black;
+    font-weight: normal;
+    font-size: 1.1rem;
+} 
+
+
+.main_section > .main_content > .news_highlights > .news_h1_right > .news_highlights_side_news{
+    /* flex : 1; */
+    color: var(--news_font_color);
+    font-weight: bold;
+    margin-left: 0rem;
+    cursor: pointer;
+}
+
+.main_section > .main_content > .news_highlights > .news_h1_right > .news_highlights_side_news > span {
+    font-size: 1rem;
+    align-items: center;
+    margin: 0rem 0rem;
+    color: rgb(56, 56, 56);
+    cursor: pointer;
+}
+
+.main_section > .main_content > .news_highlights > .news_h1_right > .news_highlights_side_news > .news_dot > i{
+    font-size: 1px;
+    margin: 100px 0px;
+}
+/* ============================== */
+/* ========End News HightLight==========*/
+/* ============================== */
+
+
+/* ============================== */
+/* ========News Media Stand===========*/
+/* ============================== */
+.main_section > .main_content > .news_stand {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_media{
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_media > .fa-newspaper{
+    color: var(--news_font_color);
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
+
+
+.main_section > .main_content > .news_stand > .news_stand_media p{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_media > .fa-chevron-right{
+    margin-right: 0.3rem;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_media > .media_gray{
+    color: var(--gray_font_color);
+    margin-right: 0.4rem;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_view_options{
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_view_options > i {
+    margin-left:  0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.main_section > .main_content > .news_stand > .news_stand_view_options > .fa-th-large{
+    color: var(--news_font_color);
+}
+
+.main_section > .main_content > .media_grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.main_section > .main_content > .media_grid > .fa-chevron-circle-left {
+    position: absolute;
+    top: 45%;
+    left: -2%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.main_section > .main_content > .media_grid > img{
+    width: 100%;
+    height: 5rem;
+    padding: 1.2rem;
+    border:  0.5px solid var(--media_grid_line);
+    cursor: pointer;
+}
+
+.main_section > .main_content > .media_grid > .fa-chevron-circle-right{
+    position: absolute;
+    top: 45%;
+    right: -1.5%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.main_section > .main_content > .basic_thing_to_read{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0rem; 
+}
+
+.main_section > .main_content > .basic_thing_to_read > .things_to_read_left p {
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.main_section > .main_content > .basic_thing_to_read > .things_to_read_left p > span{
+    font-weight: normal;
+    font-size: 15px;
+}
+
+
+.main_section > .main_content > .basic_thing_to_read > .things_to_read_right{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main_section > .main_content > .basic_thing_to_read > .things_to_read_right p{
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.main_section > .main_content > .basic_thing_to_read > .things_to_read_right > p > span {
+    color: var(--gray_font_color);
+    margin-right: 0.5rem;
+}
+
+/*=================================*/
+/*========End Basic Things to Read=========*/
+/*=================================*/
+
+
+
+/*=================================*/
+/*========Start option_things_to_read========*/
+/*================================*/
+
+.main_section > .main_content > .option_things_to_read{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.main_section > .main_content > .option_things_to_read div{
+    border: 0.5px solid var(--media_grid_line);
+    padding:1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main_section > .main_content > .option_things_to_read div a{
+    text-decoration: none;
+    color: black;
+}
+
+.main_section > .main_content > .option_things_to_read > .read_entertain:hover{
+    background-color: #E784BA;
+    color: white;
+}
+
+
+.main_section > .main_content > .option_things_to_read > .read_sport:hover{
+    background-color: rgb(204, 69, 45);
+    color: white;
+}
+
+.main_section > .main_content > .option_things_to_read > .read_webtoon:hover
+, .main_section > .main_content > .option_things_to_read > .read_tech:hover{
+    background-color: var(--news_font_color);
+    color: white;
+}
+
+.main_section > .main_content > .option_things_to_read > .read_vehicle:hover
+, .main_section > .main_content > .option_things_to_read > .read_game:hover{
+    background-color: #167e24;
+    color: white;
+}
+
+.main_section > .main_content > .option_things_to_read > .read_movie{
+    background-color: rgb(84, 172, 194);
+    color: white;
+}
+.main_section > .main_content > .option_things_to_read > .read_econmics:hover{
+    background-color: rgb(141, 40, 111);
+    color: white;
+}
+
+.main_section > .main_content > .option_things_to_read > .fa-chevron-circle-left{
+    position: absolute;
+    top: 25%;
+    left: -2%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.main_section > .main_content > .option_things_to_read > .fa-chevron-circle-right{
+    position: absolute;
+    top: 25%;
+    right: -1.5%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/*=================================*/
+/*========End option_things_to_read========*/
+/*================================*/
+
+/*=================================*/
+/*===========Start Main Content==========*/
+/*================================*/
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read{
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > img{
+    margin-left: 1rem;
+    width: 150px;
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span{
+    margin-right: 2rem;
+}
+
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > p{
+    margin: 0.2rem;
+}
+
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_filter_entertain{
+    color: var(--entertain_font_color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_title{
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_story{
+    color: var(--gray_font_color);
+}
+
+.main_section > .main_content > .main_content_read > .list_content_read > .content_item_read > a > span > .content_writer{
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--gray_font_color);
+
+}
+
+
+/*=================================*/
+/*===========Start side_content==========*/
+/*================================*/
+
+.side_content{
+    position: relative;
+}
+
+.side_content > .side_content_wrapper{
+    /* background-color: yellow; */
+    height: 100%;
+    position: relative;
+    overflow: auto;
+    margin-left: 3rem;
+}
+
+
+.side_content > .side_content_wrapper > .side_content_login{
+    display: flex;
+    background-color: #F7F9FA;
+    width: 100%;
+    height: 11.4rem;
+    border: 1px solid #DAE1E6;
+    float: left;
+    position: relative;
+}
+
+.side_content > .side_content_wrapper > .side_content_login > .login_1{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+.side_content > .side_content_wrapper > .side_content_login > .login_2{
+    /* position: absolute; */
+    background-color: var(--main_logo_color);
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    height: 80px;
+    margin-top: 50px;
+    margin-left: 10%;
+}
+
+.side_content > .side_content_wrapper > .side_content_login > .login_3{
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 10%;
+}
+
+.side_content > .side_content_wrapper > .side_content_login > .login_4{
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 77%;
+}
+
+.side_content > .side_content_wrapper > .issue{
+    width: 100%;
+    height: 48px;
+    background-color: #F7F9FA;
+    border: 1px solid #DAE1E6;
+    position: absolute;
+    top: 202px;
+}
+
+.side_content > .side_content_wrapper > .issue > .issue_1{
+    color: red;
+    border: 1px solid red;
+    border-radius: 50px;
+    font-weight: bolder;
+    width: 20%;
+    margin-right: 50px;
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+.side_content > .side_content_wrapper > .issue > .issue_2{
+    width: 60%;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+.side_content > .side_content_wrapper > .issue > .issue_3{
+    border: 1px solid #DAE1E6;
+    text-align: center;
+    float: right;
+    position: relative;
+    margin-top: 10px;
+}
+.side_content > .side_content_wrapper > .issue > .issue_4{
+    text-align: center;
+    float: right;
+    position: relative;
+    margin-right: 100px;
+    margin-top: 10px;
+}
+
+.side_content > .side_content_wrapper > .video{
+    width: 100%;
+    height: 310px;
+    /* border: 1px solid #DAE1E6; */
+    position: relative;
+    top: 80px;
+    overflow: auto;
+}
+
+.side_content > .side_content_wrapper > .video > video{
+    position: relative;
+    width: 100%;
+    height: 99%;
+}
+
+.shopping_bar{
+    display: flex;
+    top: 585px;
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    /* background-color: red; */
+}
+
+.shopping_bar > .shopping_bar1{
+    padding-left: 5px;
+}
+
+.shopping_bar > .shopping_bar2{
+    padding-left: 20px;
+}
+
+.shopping_bar > .shopping_bar3{
+    /* background-color: red; */
+    padding-left: 330px;
+    font-weight: bold;
+
+}
+
+.shopping_content{
+    width: 100%;
+    height: 63%;
+    position: relative;
+    top: 130px;
+    border: 1px solid #DAE1E6;
+}
+
+.shopping_content > .shopping_content1{
+    background-color: #F7F9FA;
+    border-bottom: 1px solid #DAE1E6;
+    height: 7%;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: bold;
+    letter-spacing : 1px;
+}
+.shopping_content > .shopping_content2{
+    /* background-color: orange; */
+    height: 5%;
+    /* text-align: right; */
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 450px;
+    letter-spacing : 5px;
+    font-weight: 400;
+}
+
+.shopping_content > .shopping_content2 > span{
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 0px;
+    position: relative;
+    top: -4px;
+}
+
+.shopping_content > .shopping_content3{
+    height: 82%;
+    position: relative;
+    text-align: center;
+    
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_1{
+    width: 33%;
+    height: 24%;
+    float: left;  
+    overflow: hidden;
+}
+.shopping_content > .shopping_content3 > .shopping_content3_1 > div > img{
+    width: 60%;
+    position: relative;
+    border: 3px solid #DAE1E6;
+    object-fit: cover;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_2{
+    width: 34%;
+    height: 24%;
+    float: left;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_2 > div > img{
+    width: 58.5%;
+    position: relative;
+    border: 3px solid #DAE1E6;
+    object-fit: cover;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_3{
+    width: 33%;
+    height: 24%;
+    float: left;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_3 > div > img{
+    width: 60%;
+    position: relative;
+    border: 3px solid #DAE1E6;
+    object-fit: cover;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_4{
+    width: 33%;
+    height: 24%;
+    float: left;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_4 > div > img{
+    width: 60%;
+    position: relative;
+    border: 3px solid #DAE1E6;
+    object-fit: cover;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_5{
+    width: 34%;
+    height: 24%;
+    float: left;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_5 > div > img{
+    width: 60%;
+    position: relative;
+    border: 3px solid #DAE1E6;
+    object-fit: cover;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_6{
+    width: 33%;
+    height: 24%;
+    float: left;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_6 > div > img{
+    width: 60%;
+    position: relative;
+    border: 3px solid #DAE1E6;
+    object-fit: cover;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_7{
+    width: 33%;
+    height: 24%;
+    float: left;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_7 > div > img{
+    width: 60%;
+    position: relative;
+    border: 3px solid #DAE1E6;
+    object-fit: cover;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_8{
+    width: 34%;
+    height: 24%;
+    float: left;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_8 > div > img{
+    width: 60%;
+    position: relative;
+    border: 3px solid #DAE1E6;
+    object-fit: cover;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_9{
+    width: 33%;
+    height: 24%;
+    float: left;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_9 > div > img{
+    width: 60%;
+    position: relative;
+    border: 3px solid #DAE1E6;
+    object-fit: cover;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_10{
+    width: 33%;
+    height: 24%;
+    float: left;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_10 > div > img{
+    width: 60%;
+    position: relative;
+    border: 3px solid #DAE1E6;
+    object-fit: cover;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_11{
+    width: 34%;
+    height: 24%;
+    float: left;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_11 > div > img{
+    width: 63%;
+    position: relative;
+    border: 3px solid #DAE1E6;
+    object-fit: cover;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_12{
+    width: 33%;
+    height: 24%;
+    float: left;
+}
+
+.shopping_content > .shopping_content3 > .shopping_content3_12 > div > img{
+    width: 67%;
+    position: relative;
+    border: 3px solid #DAE1E6;
+    object-fit: cover;
+}
+
+
+.shopping_content > .shopping_content4{
+    height: 7%;
+    /* text-align: right; */
+    font-size: 20px;
+    padding-top: 20px;
+    text-align: center;
+    letter-spacing : 5px;
+    font-weight: 400;
+}
+
+
+
+/*=================================*/
+/*===========Start footer==========*/
+/*================================*/
+
+footer {
+    width: 1080px;
+    height: 310px;
+    margin: auto;
+    padding: 0 8px 0 8px; /* 각각 위 오른쪽 아래 왼쪽 */
+    display: flex;
+    flex-direction: column; /* 요소들을 수평정렬 */
+    font-size: 12px;
+  }
+  .notice_box {
+    flex: 1;
+    display: flex;
+    justify-content: space-between; /* 양끝 정렬 */
+    align-items: center;
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .notice_box a {
+    font-weight: bold;
+    color: black;
+  }
+  .aside_box {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f1f3f6;
+  }
+  .area_user {
+    flex: 4;
+    line-height: 2em; /* 줄간격 */
+  }
+  .area_user_row {
+    display: flex;
+  }
+  .area_user_row span {
+    flex: 1;
+  }
+  .area_user_row ul {
+    flex: 6;
+  }
+  .aur_title {
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .area_user_row ul > li {
+    display: inline-block; /* li 수평정렬하는 방법 */
+    margin-left: 8px;
+  }
+  .area_col {
+    flex: 1;
+    display: flex;
+  }
+  .area_col .ac_content {
+    line-height: 20px;
+  }
+  .area_col .ac_img {
+    width: 60px;
+    height: 60px;
+  }
+  .bottom_box {
+    flex: 3;
+    padding-top: 20px;
+    font-size: 14px;
+  }
+  .bottom_box ul > li {
+    display: inline-block; /* 수평정렬 */
+    margin-left: 8px;
+  }
+  .bottom_box ul > li:last-child {
+    /* 마지막 li요소 (Naver Corp.) 굵게 */
+    font-weight: bold;
+  }
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  a {
+    text-decoration: none;
+    color: #888;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  * {
+    box-sizing: border-box; /* 길이 계산을 편하게 하기위함. box-sizing에 관한 설명은 아래 링크를 참고해주세요 */
+  }
+  /* 재사용 클래스 */
+  .color_naver {
+    color: #03cf5d;
+  }
+  .text_bold-13 {
+    font-weight: bold;
+    font-size: 13px;
+  }

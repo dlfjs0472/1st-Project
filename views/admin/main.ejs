@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navum</title>
+<!-- 커스텀 CSS -->
+<link rel="stylesheet" href="/css/style2.css">
+<!-- Fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function () {
+    $("#search_bar").on("keyup", function (e) {
+        if (e.keyCode == 13) {
+            main_search();
+            // alert("찍었어?")
+        }
+    });
+});
+function main_search() {
+    location.href=("https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query="+$("#search_bar").val());
+}
+</script>
+</head>
+<body>
+    <!-- 첫번째 색션 -->
+    <section>
+        <div class="first_side">
+            <p onclick="window.open('https://help.naver.com/support/contents/contents.help?serviceNo=1074&categoryNo=16719')" style="cursor: pointer;">네이버를 시작페이지로
+                <i class="right_arrow fas fa-chevron-circle-right"></i>
+            </p>
+            <span>|</span>
+            <p class="junior_naver" onclick="window.open('https://jr.naver.com/')" style="cursor: pointer;">
+                <span class="apply_blue">쥬</span><span class="apply_red">니</span><span class="apply_green">어</span>
+                <span class="naver_color">네이버</span>
+            </p>
+            <p class="happy_bean">해피빈</p>
+        </div>
+        <!-- 네이버 검색 창 및 로고 -->
+            <header class="main_logo">
+                <img src="../images/naver_logo.png" alt="naver logo" onclick="location.href='//localhost:3000/main.html'" style="cursor: pointer;">
+                <div id="main_search_bar" >
+                    <input type="text" id="search_bar">
+                    <!-- <div class="search_bar_icons"> -->
+                        <i class="far fa-keyboard"></i>
+                        <i class="fas fa-caret-down"></i>
+                        <div>
+                            <i class="fas fa-search"></i>
+                        </div>
+                    <!-- </div> -->
+                    </div>
+                <div>
+                </div>
+                <div class="main_logo_left">
+                    <div class="main_logo_left_1">4/23 세계 책의 날</div>
+                    <div class="main_logo_left_2">아직 책 안받아가신분</div>
+                    <div class="main_logo_left_3">이번주 까지 가져가세요~</div>
+                    <div class="main_logo_left_4">※주의: 매우 무겁습니다</div>
+                    <img class="icon_book" src="../images/icon_book.png" alt="">
+                </div>
+            </header>
+            <!-- 네이버 검색 창 및 로고 끝 -->
+    </section>
+    <!-- 첫번째 색션 끝 -->
+    <!-- option Lines-->
+    <hr class="section_divider">
+    <section>
+        <main class="main_option">
+            <div class="option_green">
+                <i class="fas fa-envelope-open-text" onclick="location.href='https://www.mobifren.com/resource/img/common/ready.gif'" style="cursor: pointer;">  메일</i>
+            </div>
+            <div class="option_green" onclick="location.href='//localhost:3000/cafe/main'" style="cursor: pointer;">
+                <p>카페</p>
+            </div>
+            <div class="option_green">
+                <p>블로그</p>
+            </div>
+            <div class="option_green">
+                <p>지식iN</p>
+            </div>
+            <div class="option_green"  onclick="location.href='//localhost:3000/shop/main'" style="cursor: pointer;">
+                <p>쇼핑</p>
+            </div>
+            <div class="option_green" onclick="location.href='//localhost:3000/admin/loginform'" style="cursor: pointer;">
+                <p>Pay</p>
+            </div>
+            <div class="option_green">
+                <i class="fas fa-play"> TV</i>
+            </div>
+            <div class="option_black">
+                <p>사전</p>
+            </div>
+            <div class="option_black">
+                <p>뉴스</p>
+            </div>
+            <div class="option_black">
+                <p>증권</p>
+            </div>
+            <div class="option_black">
+                <p>부동산</p>
+            </div>
+            <div class="option_black">
+                <p>지도</p>
+            </div>
+            <div class="option_black" onclick="location.href='//localhost:3000/movieSearch.html'">
+                <p>영화</p>
+            </div>
+            <div class="option_black">
+                <p>VIBE</p>
+            </div>
+            <div class="option_black">
+                <p>책</p>
+            </div>
+            <div class="option_black">
+                <p>웹툰</p>
+            </div>
+            <div class="option_more">
+                <p>더보기
+                    <i class="fas fa-chevron-down"></i>
+                </p>
+            </div>
+            <div class="filter_more">
+                <p><i class="fas fa-exclamation-circle"></i>
+                Request Filter<i class="fas fa-chevron-down"></i>
+            </p>
+            </div>
+        </main>
+    </section>
+    <!-- End option lines -->
+    <hr class="section_divider_bottom">
+    <!-- Main content -->
+    <section class="main_section">
+        <main class="main_content">
+            <div class="covid_banner">
+                <img src="../images/covid_care_img2.png" alt="COVID banner" onclick="window.open('http://www.koreaitacademy.com/')" style="cursor: pointer;">
+            </div>
+            <div class="news_highlights" onclick="window.open('https://news.naver.com')">
+                <div class="news_h1_left">
+                    <p class="main_news">연합 뉴스 
+                        <i class="fas fa-chevron-right"></i> 
+                        <span class="dynamic_news">
+                            켈리포니아주 주립병원 만병통치약 '치킨' 발명 성공
+                        </span>
+                    </p>
+                </div>
+                <div class="news_h1_right">
+                    <p class="news_highlights_side_news">
+                        네이버 뉴스
+                        <span class="news_dot">
+                            &#9702;
+                        </span>
+                        <span>
+                            연예 스포츠 경제
+                        </span>
+                    </p> 
+                </div>
+            </div>
+            <!-- News Stand Start -->
+            <div class="news_stand">
+                <div class="news_stand_media">
+                    <i class="far fa-newspaper"></i>
+                    <p>뉴스스탠드</p>
+                    <i class="fas fa-chevron-right"></i>
+                    <p class="media_gray">구독한 언론사</p>
+                    <p>전체언론사</p>
+                </div>
+                <div class="news_stand_view_options">
+                    <i class="fas fa-list"></i>
+                    <i class="fas fa-th-large"></i>
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+            <!-- End News Stand -->
+            <!-- Start Media grids -->
+            <div class="media_grid">
+                <i class="fas fa-chevron-circle-left"></i>
+                <img src="../images/medias/1.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/1.png'" onclick="window.open('http://jtbc.joins.com/')">
+                <img src="../images/medias/2.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/2.png'" onclick="window.open('http://etnews.com')">
+                <img src="../images/medias/3.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/3.png'" onclick="window.open('http://mbn.co.kr')">
+                <img src="../images/medias/4.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/4.png'" onclick="window.open('http://kbs.co.kr')">
+                <img src="../images/medias/5.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/5.png'" onclick="window.open('http://munhwa.com')">
+                <img src="../images/medias/6.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/6.png'" onclick="window.open('http://wowtv.co.kr')">
+                <img src="../images/medias/7.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/7.png'" onclick="window.open('http://joongang.joins.com')">
+                <img src="../images/medias/8.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/8.png'" onclick="window.open('http://mk.co.kr')">
+                <img src="../images/medias/9.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/9.png'" onclick="window.open('http://sportsseoul.com')">
+                <img src="../images/medias/10.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/10.png'" onclick="window.open('http://hankyung.com')">
+                <img src="../images/medias/11.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/11.png'" onclick="window.open('http://eroun.net')">
+                <img src="../images/medias/12.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/12.png'" onclick="window.open('http://donga.com')">
+                <img src="../images/medias/13.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/13.png'" onclick="window.open('http://stoo.asiae.co.kr')">
+                <img src="../images/medias/14.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/14.png'" onclick="window.open('http://sedaily.com')">
+                <img src="../images/medias/15.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/15.png'" onclick="window.open('http://sbs.co.kr')">
+                <img src="../images/medias/16.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/16.png'" onclick="window.open('http://koreaherald.com/')">
+                <img src="../images/medias/17.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/17.png'" onclick="window.open('http://biz.heraldcorp.com')">
+                <img src="../images/medias/18.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/18.png'" onclick="window.open('http://nocutnews.co.kr')">
+                <img src="../images/medias/19.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/19.png'" onclick="window.open('http://pressian.com')">
+                <img src="../images/medias/20.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/20.png'" onclick="window.open('http://newsis.com')">
+                <img src="../images/medias/21.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/21.png'" onclick="window.open('http://kmib.co.kr')">
+                <img src="../images/medias/22.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/22.png'" onclick="window.open('http://mediatoday.co.kr')">
+                <img src="../images/medias/23.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/23.png'" onclick="window.open('http://mt.co.kr')">
+                <img src="../images/medias/24.png" onmouseover="this.src='../images/medias/기사보기.png'"onmouseout="this.src='../images/medias/24.png'" onclick="window.open('http://sedaily.com')">
+                <i class="fas fa-chevron-circle-right"></i>
+            </div>
+            <!-- End Media grids-->
+            <!-- Start basic things to read -->
+            <div class="basic_thing_to_read">
+                <div class="things_to_read_left">
+                    <p>오늘 읽을만한 글 
+                        <span>주제별로 분유된 다양한 글 모음</span>
+                    </p>
+                </div>
+                <div class="things_to_read_right">
+                    <p>2,152  <span class="gray_font">개의 글</span></p>
+                    <span>|</span>
+                    <p class="favorite_filter"> 
+                        <i class="fas fa-cog"></i>
+                        관심주제 설정
+                    </p>
+                </div>
+            </div>
+            <!-- End basic thing to read -->
+            <!-- Main Basic thing to read -->
+            <div class="option_things_to_read" id="option_menu">
+                <i class="fas fa-chevron-circle-left"></i>
+                <div class="read_movie" onclick="location.href='//localhost:3000/movieSearch.html'">
+                    영화
+                </div>
+                <div class="read_sport">
+                    스포츠
+                </div>
+                <div class="read_webtoon">
+                    웹툰
+                </div>
+                <div class="read_vehicle">
+                    자동차
+                </div>
+                <div class="read_game">
+                    게임
+                </div>
+                <div class="read_tech">
+                    테크
+                </div>
+                <div class="read_entertain">
+                    엔터
+                </div>
+                <div class="read_econmics">
+                    경제M
+                </div>
+                <i class="fas fa-chevron-circle-right"></i>
+            </div>
+            <!-- End Main Basic thing to read -->
+            <!-- Start Main Content Read -->
+            <div class="main_content_read">
+                <ul class="list_content_read">
+                    <li class="content_item_read">
+                        <a href="#">
+                            <img src="../images/contents/content1.jpg" alt="about_time" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=92075')">
+                            <span onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=92075')">
+                                <p class="content_filter_entertain">인생영화</p>
+                                <p class="content_title">[어바웃타임]아직까지 어바웃 타임을 깬 인생영화는 없다.</p>
+                                <p class="content_story">영화관에서도 보고 영화파일을 다운해서 개인소장도 하면서 두고두고 꺼내보는, 10년이 지나도 꺼내보고 싶은 영화 어바웃타임..!!
+                                    로맨스 영화라고만 생각했었는데 철학적이면서 교훈을 얻을 수 있는 내용이라 정말 시간 가는줄 모르고 봤다 줄거리는 대략 이렇다. 
+                                    모태솔로 팀이 성인이 된 날, 아버지로부터 비밀을 듣게되는데.그게 바로 이 사진과 관련된 내용이다 ㅎㅎ시간을 되돌릴 수 있는 능력이 있다라는 것이였다!
+                                    이렇게 장롱 안에 들어가서 눈을 꼭 감고 손을 불끈 쥐고내가 돌아가고싶은 순간을 떠올리면 그 시간으로 돌아가게 되는 것이다!!
+                                </p>
+                                <span class="content_writer">
+                                    씨네무비 &nbsp; · 3일 전
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="content_item_read">
+                        <a href="#">
+                            <img src="../images/contents/content2.jpg" alt="on_your_wedding_day" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=140652')">
+                            <span onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=140652')">
+                                <p class="content_filter_entertain">봄날의 향기가 떠오르는 영화</p>
+                                <p class="content_title">[아련한 첫사랑 떠올리는 영화] 박보영,김영광 '너의결혼식'</p>
+                                <p class="content_story">고3 여름, 전학생 승희가 학교에 찾아오게 되고 우영은 승희를 처음 보는 순간 반하게 됩니다
+                                    우영은 승희를 쫒아다닌 끝에 공식적으로 사귀게 됩니다 잘 지내던 중 갑자기 승희는 한 통의 전화를 남긴채 동네에서 사라지게 됩니다                                  
+                                    우연은 그렇게 첫사람이 끝난건가 슬퍼하던 중 우연히 승희가 있는 학교를 알아내게 됩니다                                    
+                                    우연은 승희와 같은 학교를 가기위해 밥 먹는 시간까지 아껴가면서 공부를 하게 되었고                                    
+                                    결국 합격을 하게 되었습니다 그렇지만 고등학교와 다르게 너무나도 큰 대학교에서 승희를 찾는 것은 쉬운 일이 아니였죠                                    
+                                    끈질긴 노력 끝에 우연은 승희를 발견하게 되었고 승희와 다시 잘해보려고 했습니다                                    
+                                    하지만 그의 앞을 가로 막은 것은 그녀의 남자친구였습니다                                    
+                                </p>
+                                <span class="content_writer">
+                                    출발 비디오 여행 &nbsp; · 2주일 전
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="content_item_read">
+                        <a href="#">
+                            <img src="../images/contents/content4.jpg" alt="Jo">
+                            <span>
+                                <p class="content_filter_entertain">영화인의 일상</p>
+                                <p class="content_title">나른한 주말 오후 전 드라이브를 즐겨요</p>
+                                <p class="content_story">주말에 새벽감성을 느끼기 위해 고양에서 출발해 수원까지 가고 있었는데요. 이날 가는 길이 너무 예뻐서 차량 블랙박스에 찍힌 영상을 순간 캡처했습니다.
+                                    서울근교 드라이브코스는 늘 차가 막히는 데요. 이에 새벽감성도 느낄 겸 저는 새벽에 서울근교 드라이브코스를 밟는 것을 추천해요.                                    
+                                    서울 야간 드라이브코스를 달리는 것도 좋긴 하지만 야간에는 위험할 수도 있어 새벽 6:00에 출발하는 것이 더 나을 수도 있겠습니다
+                                </p>
+                                <span class="content_writer">
+                                    주간영화 &nbsp; · 6만년 전
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="content_item_read">
+                        <a href="#">
+                            <img src="../images/contents/content3.jpg" alt="closer" onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=39723')">
+                            <span onclick="window.open('https://movie.naver.com/movie/bi/mi/basic.nhn?code=39723')">
+                                <p class="content_filter_entertain">영화 일기장</p>
+                                <p class="content_title">거짓없는 진실 때문에 사랑이 멈춘다[클로저]</p>
+                                <p class="content_story">부고기사를 전문적으로 쓰는 기자 댄. 그는 작가가 되고 싶어 한다. 어느 날 그는 우연히 길에서 앨리스라는 여성을 만나게 된다. 가벼운 교통사고를 계기로 앨리스와 댄은 가까워지고, 둘은 연인 사이로 발전한다.
+                                    댄은 앨리스의 삶을 소재로 소설을 쓰고, 프로필 사진을 찍기 위해 사진작가 안나를 만난다. 안나에게 끌림을 느낀 댄은 그녀를 유혹하고 안나는 여자친구가 있음에도 뻔뻔하게 자기를 유혹하는 그를 거부하면서도 묘한 끌림을 느낀다.                                     
+                                    한편 댄은 채팅 사이트에서 여자인척을 하고, 한 남자에게 안나인척 수족관에서 보자고 유혹한다. 수족관은 평소 안나가 자주 가던 곳이었고, 정말로 그 남자와 안나는 만나게 된다. 댄에게 속아 안나를 만난 남자는 의사인 래리였다. 래리는 안나를 마음에 들어하고 둘은 연인 사이가 된다.                               </p>
+                                <span class="content_writer">
+                                    씨네21 &nbsp; · 어제
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- End Main Content Read -->
+        </main>
+
+        <!-- side content start -->
+        <div class="side_content">
+            <div class="side_content_wrapper">
+                <div class="side_content_login">
+                    <div class="login_up">
+                        <div class="login_up1"><img src="../images/login_logo.png" alt=""></div>
+                        <div class="login_up2">
+                            <span class="login_up2-1">김도균+조하경님</span>
+                            <span class="login_up2-2">|</span>
+                            <span class="login_up2-3">내정보     <i class="fas fa-lock"></i></span>
+                            <div class="login_up2-4">admin@naver.com</div>
+                            <span class="login_up2-5">메일&nbsp;&nbsp;<span class="zero">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span> 
+                            <span class="login_up2-5">쪽지&nbsp;&nbsp;<span class="zero">0</span></span> 
+                        </div>
+                        <div class="login_up3">
+                            <span class="login_up3-1">로그아웃</span>
+                        </div>
+                    </div>
+                    <div class="login_down">
+                        <div class="login_down1" style="cursor: pointer;">알림</div>
+                        <div class="login_down2" style="cursor: pointer;">MY구독</div>
+                        <div class="login_down3" style="cursor: pointer;">메일</div>
+                        <div class="login_down4" style="cursor: pointer;" onclick="location.href='//localhost:3000/cafe/main'">카페</div>
+                        <div class="login_down5" style="cursor: pointer;">블로그</div>
+                    </div>
+                </div>
+                <div class="issue">
+                    <span class="issue_1"onclick="window.open('https://news.naver.com')" style="cursor: pointer;">&nbsp;LIVE </span>
+                    <span class="issue_2" onclick="window.open('https://news.naver.com')" style="cursor: pointer;">저녁방송 메인뉴스 보기</span>
+                    <span class="issue_4">&nbsp;<i class="far fa-caret-square-left fa-2x" style="cursor: pointer;"></i>&nbsp;<i class="far fa-caret-square-right fa-2x" style="cursor: pointer;"></i>&nbsp;</span>   
+                </div>
+
+                <div class="video">
+                    <video 
+                    src="../images/NAVUM_VIDEO.mp4" 
+                    controls
+                    autoplay
+                    loop
+                    muted
+                    ></video>
+                </div>
+                <div class="shopping_bar">
+                    <span class="shopping_bar1"> <img src="../images/naver_logo2.jpg" width="20px"> </span>
+                    <span class="shopping_bar2">트렌드쇼핑<i class="fas fa-chevron-right"></i></span>
+                    <span class="shopping_bar3">상품&nbsp; 쇼핑몰&nbsp; MEN</span> 
+                </div>
+
+                <div class="shopping_content">
+                    <div class="shopping_content1">G마켓&#9702;옥션&#9702;11번가&#9702;이마트몰&#9702;티몬&#9702;위메프<br>
+                        쿠팡&#9702;신세계몰&#9702;올리브영&#9702;GS샵&#9702;롯데i몰&#9702;CJmall</div>
+                    <div class="shopping_content2"><span>1/18</span> &nbsp;<i class="far fa-caret-square-left fa-2x"></i>&nbsp;<i class="far fa-caret-square-right fa-2x"></i></div>
+                    <div class="shopping_content3">
+                        <div class="shopping_content3_1" >
+                            <div><img src="../images/shopping/product-1.jpg"onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;"></div>
+                            <div onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;"> <span style="font-weight: bold;">화이트 블레이저</span><br>35% 세일특가</div>
+                        </div>
+                        <div class="shopping_content3_2">
+                            <div><img src="../images/shopping/product-2.jpg" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;" ></div>
+                            <div> <span style="font-weight: bold;" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;">블랙티셔츠</span><br>3.5% 세일특가</div>
+                        </div>
+                        <div class="shopping_content3_3">
+                            <div><img src="../images/shopping/product-3.jpg" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;"></div>
+                            <div> <span style="font-weight: bold;" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;">화이트 티셔츠</span><br>0.35% 세일특가</div>
+                        </div>
+                        <div class="shopping_content3_4">
+                            <div><img src="../images/shopping/product-4.jpg" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;"></div>
+                            <div> <span style="font-weight: bold;" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;">찢청</span><br>대신 찢어드림</div>
+                        </div>
+                        <div class="shopping_content3_5">
+                            <div><img src="../images/shopping/product-5.jpg" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;"></div>
+                            <div> <span style="font-weight: bold;" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;">사놓고</span><br>안입는 옷</div>
+                        </div>
+                        <div class="shopping_content3_6">
+                            <div><img src="../images/shopping/product-6.jpg" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;"></div>
+                            <div> <span style="font-weight: bold;" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;">연예인도 다니는 </span><br>태닝샵</div>
+                        </div>
+                        <div class="shopping_content3_7">
+                            <div><img src="../images/shopping/product-7.jpg" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;"></div>
+                            <div> <span style="font-weight: bold;" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;">전문 리폼업체</span><br>커튼을 원피스로</div>
+                        </div>
+                        <div class="shopping_content3_8">
+                            <div><img src="../images/shopping/product-8.jpg" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;"></div>
+                            <div> <span style="font-weight: bold;" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;">특강!!</span><br>발레교습</div>
+                        </div>
+                        <div class="shopping_content3_9">
+                            <div><img src="../images/shopping/product-9.jpg" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;"></div>
+                            <div> <span style="font-weight: bold;" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;">멀리서 보면 이뻐보인다!</span><br>멀리서만</div>
+                        </div>
+                        <div class="shopping_content3_10">
+                            <div><img src="../images/shopping/product-10.jpg" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;"></div>
+                            <div> <span style="font-weight: bold;" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;">베이지 셔츠</span><br>보다 신발구입 급선무</div>
+                        </div>
+                        <div class="shopping_content3_11">
+                            <div><img src="../images/shopping/product-11.jpg" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;"></div>
+                            <div> <span style="font-weight: bold;" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;">역시 패션의 완성은</span><br>얼굴이다</div>
+                        </div>
+                        <div class="shopping_content3_12">
+                            <div><img src="../images/shopping/product-12.jpg" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;"></div>
+                            <div> <span style="font-weight: bold;" onclick="window.open('https://shopping.naver.com/')" style="cursor: pointer;">누가누가</span><br>어깨가 더 좁나</div>
+                        </div>
+                    </div>
+                    <div class="shopping_content4"><i class="far fa-caret-square-left fa-lg"></i>   1/18  <i class="far fa-caret-square-right fa-lg"></i></div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+        <!-- side content End -->
+    </section>
+
+
+    <!-- End of Main content -->
+    <!-- Custom js -->
+    <script src="../js/app.js"></script>
+    <footer>
+        <div class="notice_box">
+        <a href="/">공지사항</a>
+        <a href="/">서비스 전체보기></a>
+        </div>
+        <div class="aside_box">
+        <div class="area_user">
+            <div class="area_user_row">
+            <span class="text_bold-13">Creators</span>
+            <ul>
+                <li><a href="/">크리에이터</a></li>
+                <li><a href="/">스몰비즈니스</a></li>
+            </ul>
+            </div>
+            <div class="area_user_row">
+            <span class="text_bold-13">Partners</span>
+            <ul>
+                <li><a href="/">비즈니스 광고</a></li>
+                <li><a href="/">스토어 개설</a></li>
+                <li><a href="/">지역업체 등록</a></li>
+            </ul>
+            </div>
+            <div class="area_user_row">
+            <span class="text_bold-13">Developers</span>
+            <ul>
+                <li><a href="/">네이버 개발자센터</a></li>
+                <li><a href="/">오픈API</a></li>
+                <li><a href="/">오픈소스</a></li>
+                <li><a href="/">네이버 D2</a></li>
+                <li><a href="/">네이버 D2SF</a></li>
+                <li><a href="/">네이버 랩스</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="area_col">
+            <div class="ac_content">
+            <div class="text_bold-13">웨일 브라우저</div>
+            <div class="ac_link"><a href="https://whale.naver.com/ko/">다운받기</a></div>
+            </div>
+            <a href="/"><img src="../images/icon_whale.png" class="ac_img"/></a>
+        </div>
+        <div class="area_col">
+            <div class="ac_content">
+            <div class="text_bold-13">프로젝트 꽃</div>
+            <div class="ac_link"><a href="http://blog.naver.com/naver_diary/221196347486">바로가기</a></div>
+            </div>
+            <a href="/"><img src="../images/icon_flower.png" class="ac_img"/></a>
+        </div>
+        </div>
+        <div class="bottom_box">
+        <ul>
+            <li><a href="/">회사소개</a></li>
+            <li><a href="/">인재채용</a></li>
+            <li><a href="/">제휴제안</a></li>
+            <li><a href="/">이용약관</a></li>
+            <li><a href="/">개인정보처리방침</a></li>
+            <li><a href="/">청소년보호정책</a></li>
+            <li><a href="/">네이버 정책</a></li>
+            <li><a href="/">고객센터</a></li>
+            <li><a href="/">&copy; NAVER Corp.</a></li>
+        </ul>
+        </div>
+    </footer>
+</body>
+</html> 

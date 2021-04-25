@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tablename{
+  background-color: orange;
+}
+</style>
+</head>
+<body>
+
+<h2>쿠킹덤 전체게시판</h2>
+<p><%=cafeList.length%>개의 글</p>
+
+<table>
+  <tr class="tablename">
+    <th style="text-align: center;">No</th>
+    <th style="text-align: center;">이미지</th>
+    <th style="text-align: center;">제목</th>
+    <th style="text-align: center;">작성자</th>
+    <th style="text-align: center;">작성일</th>
+    <th style="text-align: center;">조회수</th>
+  </tr>
+
+  <%var totalRecord=cafeList.length; //총 게시물 수를 담자%>
+  <%for(var i=0; i<cafeList.length; i++){%>
+  <%var cafe=cafeList[i]; //배열에서 json 하나 꺼내기%>
+
+  <tr>
+    <td style="text-align: center;"><%=(totalRecord--)%></td>
+    <td style="text-align: center;"><img src="/product/<%=cafe.filename%>" width="45px"></td>
+    <td style="text-align: center;"><a href="/cafe/detail?cafe_id=<%=cafe.cafe_id%>"><%=cafe.title%></a></td>
+    <td style="text-align: center;"><%=cafe.writer%></td>
+    <%var d = new Date(cafe.regdate);%>
+    <td style="text-align: center;">
+        <%=d.getFullYear()%>-<%=lib.getZeroString(d.getMonth()+1)%>-<%=lib.getZeroString(d.getDate())%>
+    </td style="text-align: center;">
+    <td style="text-align: center;"><%=cafe.hit%></td>
+  </tr>
+ <%}%>
+ 
+ <tr>
+  <td colspan="6">
+    <button onClick="location.href='/html/regist_form.html'" style="font-weight: bolder; border-radius: 20%; border: thin solid orangered; cursor: pointer; width:100px; background-color: orange;">글등록</button>
+    <button onClick="location.href='/cafe/main'" style="font-weight: bolder; border-radius: 20%; border: thin solid orangered; cursor: pointer; width:200px; background-color: orange; margin-left: 15px;">메인으로 돌아가기</button>
+  </td>
+</tr>
+</table>
+
+<div style="margin-top: 15px;">
+  <img src="/image/cafe/wallpaper.jpg" alt="" style="width: 100%;">
+</div>
+
+</body>
+</html>

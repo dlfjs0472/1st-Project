@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<title>movieSearch</title>
+<style>
+body{
+    width: 100%;
+    height: 100%;
+    background: #343d46;
+    position: relative;
+}
+ 
+.box{
+    margin: 100px auto;
+    width: 300px;
+    height: 50px;
+    position: relative;
+}
+.container-1{
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+}
+.container-1 > input{
+    width: 300px;
+    height: 50px;
+    background: #2b303b;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #262626;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+ 
+   
+    -webkit-transition: background .55s ease;
+    -moz-transition: background .55s ease;
+    -ms-transition: background .55s ease;
+    -o-transition: background .55s ease;
+    transition: background .55s ease;
+}
+.container-1 .icon{
+  position: absolute;
+  top: 50%;
+  margin-left: 17px;
+  margin-top: 14px;
+  z-index: 1;
+  color: #4f5b66;
+}
+.container-1 input:hover, .container-1 input:focus, .container-1 input:active{
+    outline:none;
+    background: #ffffff;
+}
+
+.container-1 input::-webkit-input-placeholder {
+   color: #65737e;
+}
+
+.main_logo {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.main_logo > .color_green{
+    font-size: 50px;
+    font-weight: bolder;
+    color: #04CF5C;
+}
+.main_logo > .color_orange{
+    font-size: 50px;
+    font-weight: bolder;
+    color: #FBB900;
+}
+.main_logo > .color_red{
+    font-size: 50px;
+    font-weight: bolder;
+    color: #EF685E;
+}
+
+.main_logo  > .MOVIE_logo{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#content{
+    width: 1500px;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin: auto;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function(){
+    $("#keyword").on("keyup",function(e){
+        if(e.keyCode==13){
+            searchData();
+        }
+    });    
+});
+function searchData(){
+    $.ajax({
+        url:"/movie/list?keyword="+$("#keyword").val(), 
+        type:"get",
+        success:function(result, status, xhr){
+            printData(result);
+        }
+    });
+}
+function printData(obj){
+    console.log(obj)
+    var tag="<table border='1px'>";
+    tag+="<tr>";
+    tag+="<td width='400px'>영화제목</td>";
+    tag+="<td width='150px'>이미지</td>";
+    tag+="<td width='200px'>출연배우</td>";
+    tag+="<td width='200px'>감독</td>";
+    tag+="<td width='100px'>개봉</td>";
+    tag+="<td width='100px'>별점</td>";
+    tag+="</tr>";
+    for(var i=0; i<obj.items.length; i++){
+        tag+="<tr>";
+        tag+="<td>"+obj.items[i].title+"</td>";
+        tag+="<td><img src='"+obj.items[i].image+"' width='150px' height='200px'></td>";
+        tag+="<td>"+obj.items[i].actor+"</td>";
+        tag+="<td>"+obj.items[i].director+"</td>";
+        tag+="<td>"+obj.items[i].pubDate+"</td>";
+        tag+="<td>"+obj.items[i].userRating+"</td>";
+        tag+="</tr>";
+    }        
+    tag+="</table>";
+
+    $("#content").html();
+    $("#content").html(tag);
+}
+</script>
+</head>
+<body>
+    <P class="main_logo">
+        <span class="color_green">NAV</span><span class="color_orange">u</span><span class="color_red">m</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="MOVIE_logo">MOVIE</span>
+    </P>
+    <div class="box">
+        <div class="container-1">
+            <span class="icon"><i class="fa fa-search" onclick="" style="cursor: pointer;"></i></span>
+            <input type="search" id="keyword" placeholder="Search..." />
+        </div>
+    </div>
+    <div id="content">
+        
+    </div>
+</body>
+</html>
